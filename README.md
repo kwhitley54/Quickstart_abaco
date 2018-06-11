@@ -35,8 +35,20 @@
 <p>Docker is a computer program that performs operating-system-level virtualization also known as containerization. It is developed by Docker, Inc.</p>
 
 
+<h3>What is a container?</h3>
+
+<p>A container image is a lightweight, stand-alone, executable package of a piece of software that includes everything needed to run it: code, runtime, system tools, system libraries, settings.</p>
+
+<ul>
+
+	<li>Available for both Linux and Windows based apps</li>
+	<li>Containerized software will always run the same, regardless of the environment.</li>
+	<li>Docker containers isolate applications from one another and from the underlying infrastructure. </li>
+
+</ul>
 
 
+<p>To learn more about dockers, please feel free to click on the hyperlink to the official dockers website. <a href = "https://www.docker.com/what-docker">ClickHere</a>
 
 
 
