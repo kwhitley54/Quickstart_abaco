@@ -41,9 +41,9 @@
 
 <ul>
 
-	<li>Available for both Linux and Windows based apps</li>
-	<li>Containerized software will always run the same, regardless of the environment.</li>
-	<li>Docker containers isolate applications from one another and from the underlying infrastructure. </li>
+	<li>Available for both Linux and Windows based apps
+	<li>Containerized software will always run the same, regardless of the environment.
+	<li>Docker containers isolate applications from one another and from the underlying infrastructure.
 
 </ul>
 
