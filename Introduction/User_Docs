@@ -3,12 +3,10 @@
 
 There are three higher-level capabilities that are being developed on top of abaco web service and computing platform:
 
-<ul>
-   <li> Reactors for event-driven programming</li>
-   <li> Asynchronous executor for scaling out function calls within running application</li>
-   <li>Data adapter for creating rationalized micoservices from disparate and heterogeneou source of data.</li>
-
-Reactors Documentation
+*Reactors for event-driven programming
+*Asynchronous executor for scaling out function calls within running application</li>
+*Data adapter for creating rationalized micoservices from disparate and heterogeneou source of data.</li>
+ Reactors Documentation
 
 Abaco reactors enable developers to implement event-driven programming models that are well integrated into the TACC ecosystem. Here we cover the basics of creating your own reactor Docker images and working with the Reactors service to register, execute and retrieve data about your reactors.
 
