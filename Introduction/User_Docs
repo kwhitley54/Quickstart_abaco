@@ -1,1 +1,11 @@
-#File is for the user 
+#File is for the user
+
+
+There are three higher-level capabilities that are being developed on top of abaco web service and computing platform:
+
+<ul>
+   <li> Reactors for event-driven programming</li>
+   <li> Asynchronous executor for scaling out function calls within running application</li>
+   <li>Data adapter for creating rationalized micoservices from disparate and heterogeneou source of data.</li>
+
+These capabilities are under active development. for more infomation click on the link. <a href = "https://github.com/TACC/abaco/blob/master/docs/user_docs.md">Abaco User Guide</a>
