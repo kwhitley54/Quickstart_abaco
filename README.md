@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<h1>Abaco</h1>
+<h1>Documentation</h1>
 
 
 <h2>What is Abaco?</h2>
