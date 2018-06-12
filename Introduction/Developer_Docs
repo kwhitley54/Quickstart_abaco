@@ -1,1 +1,18 @@
+#This file is for the developer side of abaco
 
+
+This section goes into more technical details about configuration and implementation of Abaco.
+
+
+<h1>Configuration</h1>
+
+The Abaco system has several configuration options. Configurations are placed in the abaco.conf file and is mounted into the initial containers for:
+
+<ul>
+   <li>Web Applications</li>
+   <li>Spawners</li>
+   <li>Health Supervisors</li>
+   <li>Clint Generators</li>
+</ul>
+
+For for infomoration, please feel free to click on the link to the developer documentation. <a href = "https://github.com/TACC/abaco/blob/master/docs/developer_docs.md">Developer Documentation</a>
