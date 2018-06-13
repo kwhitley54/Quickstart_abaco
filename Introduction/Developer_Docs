@@ -1,22 +1,9 @@
 #This file is for the developer side of abaco
 
 
-This section goes into more technical details about configuration and implementation of Abaco.
+Configurations
 
-
-<h1>Configuration</h1>
-
-The Abaco system has several configuration options. Configurations are placed in the abaco.conf file and is mounted into the initial containers for:
-
-<ul>
-   <li>Web Applications</li>
-   <li>Spawners</li>
-   <li>Health Supervisors</li>
-   <li>Clint Generators</li>
-</ul>
-
-
-For containers started dynamically, such as the worker containers, the conf file must be present on the host and the path to the file must be known by the agents starting the containers (such as the spawners in the case of workers). Abaco agents look for the environment variable "abaco_conf_host_path" to know where to mount the conf file from on the host. In the local development docker-compose file, we set the abaco_conf_host_path based on the variable "abaco_path", which should be a directory containing a config file (for example, the github project root). For example, to get started locally, once can put export abaco_path=$(pwd) from within the project root and the compose file will use the local-dev.conf file there (see the Abaco README.md in the project root).
+The Abaco system has several configuration options. Configurations are placed in the abaco.conf file and mounted into the initial containers for the web applications, spawners, health supervisors, and client generators. For containers started dynamically, such as the worker containers, the conf file must be present on the host and the path to the file must be known by the agents starting the containers (such as the spawners in the case of workers). Abaco agents look for the environment variable "abaco_conf_host_path" to know where to mount the conf file from on the host. In the local development docker-compose file, we set the abaco_conf_host_path based on the variable "abaco_path", which should be a directory containing a config file (for example, the github project root). For example, to get started locally, once can put export abaco_path=$(pwd) from within the project root and the compose file will use the local-dev.conf file there (see the Abaco README.md in the project root).
 
 The abaco.conf file in the project root should be self documenting and contain all possible options. Here we want to highlight some of the bigger, more important config options
 
@@ -172,4 +159,6 @@ Making requests to the local development stack is easy using the requests librar
 >>> from util import *
 >>> import requests
 >>> requests.get('{}/actors'.format(base_url), headers=headers).json()
->>> requests.post('{}/actors'.format(base_url), data={'image': 'abacosamples/py3_func:dev'}, headers=head
+>>> requests.post('{}/actors'.format(base_url), data={'image': 'abacosamples/py3_func:dev'}, headers=headers).json()
+
+
