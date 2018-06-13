@@ -10,4 +10,4 @@ There are two main types of web request:
 
 *POST request:POST carries request parameter in message body which makes it more secure way of transferring data from client to server in http protocol. 
 
-For more infomation on web request click on the link <a href = "https://www.w3schools.com/tags/ref_httpmethods.asp>W3schools</a>
+For more infomation on web request click on the link (https://www.w3schools.com/tags/ref_httpmethods.asp)
