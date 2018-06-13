@@ -3,10 +3,13 @@
 
 There are three higher-level capabilities that are being developed on top of abaco web service and computing platform:
 
-*Reactors for event-driven programming
-*Asynchronous executor for scaling out function calls within running application</li>
-*Data adapter for creating rationalized micoservices from disparate and heterogeneou source of data.</li>
- Reactors Documentation
+<ul>
+<li>Reactors for event-driven programming</li>
+<li>Asynchronous executor for scaling out function calls within running application</li>
+<li>Data adapter for creating rationalized micoservices from disparate and heterogeneou source of data.</li>
+ Reactors Documentation</li>
+
+</ul>
 
 Abaco reactors enable developers to implement event-driven programming models that are well integrated into the TACC ecosystem. Here we cover the basics of creating your own reactor Docker images and working with the Reactors service to register, execute and retrieve data about your reactors.
 
@@ -32,6 +35,7 @@ from busybox
 add test.sh /test.sh
 run chmod +x /test.sh
 CMD ["sh", "/test.sh"]
+
 The test.sh script could be anything. Here is an example:
 
 #!/bin/bash
@@ -49,6 +53,7 @@ env
 # print the root file system:
 echo "Contents of root file system: "
 ls /
+
 In the test script we echo various strings and variables to standard out. The output sent to standard out will be captured in the logs for the reactor execution, following the Docker convention.
 
 Note also that we echo the contents of the MSG variable. This is a special environment variable created by the reactor system when a raw string is passed as the payload to the reactor's inbox. The Reactors service facilitates communication with reactor containers through environment variables. The section below gives a complete list of environment variables set by the service.
@@ -74,16 +79,19 @@ Getting the Python Utilities
 To use the Python base image, create a Dockerfile with the following:
 
 from abacosamples/base-ubu
+
 Note: The base image is based on Ubuntu 16.04.
 
 The primary utility offered by the base image is the agavepy Python package. Users can add this to their own Docker image by installing agavepy, either from source or via pip. For example, one could add the following to their Dockerfile:
 
 RUN pip install agavepy
+
 The actor module
 
 The agavepy package is a complete Python binding for TACC's Agave API. Here, we focus on the actor module. To import the module, add the following line in your Python program:
 
 from agavepy import actors
+
 Currently, the actors module provides the following utilities:
 
   * `get_context()` - returns a Python dictionary with the following fields:
@@ -110,12 +118,15 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 In order to create a Docker image with this reactor, create a Dockerfile that descends from the base image and add the Python module:
 
 from abacosamples/base
+
 ADD myactor.py /myactor.py
 
 CMD ["python", "/myactor.py"]
+
 Leveraging TACC APIs from Within Reactors
 
 One of the powerful features of reactors is that they can make authenticated requests to other TACC APIs during their execution. This is also straight-forward using the agavepy library.
@@ -243,6 +254,7 @@ Reactors can (optionally) be registered with a set of key/value pairs to always 
 For example, if we had a reactor with a default environment of {"key1": "value1", "key2": "value2"} (this was the case in one of our previous examples), we could overwrite the value of key1 by passing a different value in the query string like so:
 
 $ curl -H "Authorization: Bearer $TOKEN" -d "message=some test message" https://api.tacc.cloud/actors/v2/$REACTOR_ID/messages?key1=valueABC
+
 In this case, the reactor container for this one execution would have the following environment variables and values (in addition to the standard ones injected by the Reactors service):
 
 key1=valueABC
@@ -375,6 +387,7 @@ Finally, we can use the executor's map() method to map a function over a set of 
 In the following example, we make a single nonblocking call to the function g to compute the product of two two square numpy arrays:
 
 import numpy as np
+
 def g(std_dev, size):
     A = np.random.normal(0, std_dev, (size, size))
     B = np.random.normal(0, std_dev, (size, size))
