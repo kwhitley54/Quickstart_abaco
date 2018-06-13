@@ -8,5 +8,5 @@ Three main things are collected  in the process of excecting a actor container:
 <ul>
    <li>States</li>
    <li>Logs</li>
-   <Statistics</li>
+   <li>Statistics</li>
 </ul> 
