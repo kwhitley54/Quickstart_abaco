@@ -8,4 +8,4 @@ What is a container ?
 
 A container image is a lightweight, stand alone executable package of a piece ofsoftware that includes everything needed to run it: code, runtime,system tootls, system libraries, and settings. For more information click the link("https://www.docker.com/what-container")
 
-For additonal practice to understand docker and how to run containers, please visit the link to the docker tutorial("https://docker-curriculum.com").
+For additional practice to understand docker and how to run containers, please visit the link to the docker tutorial("https://docker-curriculum.com").
