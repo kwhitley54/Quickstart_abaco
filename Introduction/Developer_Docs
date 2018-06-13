@@ -106,7 +106,7 @@ Spawner starts the worker containers using the configured docker daemon (for now
 If the actor already had workers and Spawner was instructed to stop the existing workers, it sends messages to them at this point to shut down.
 Spawner checks the generate_clients config within the workers stanza to see if client generation is enabled.
 Spawner sends a message to the clientg agent via the ClientsChannel requesting a new client.
-Clientg responds to Spawner with a message containing the client key and secret, access token, and refresh token if client generation was successful.
+Client responds to Spawner with a message containing the client key and secret, access token, and refresh token if client generation was successful.
 Once all workers have responded healthy and all clients have been generated, Spawner sends a final message to each worker instructing them to subscribe to the actor mailbox channel. This message will contain the client credentials and tokens if those were generated.
 Dependence on Docker Version
 
